@@ -1,0 +1,7 @@
+/* Common styles for Login and SignUp */
+.wrapper {
+    display: grid;
+    place-items: center; /* Center both vertically and horizontally */
+    height: 100vh;      /* Full viewport height */
+    margin: 0;          /* Reset margin */
+  }

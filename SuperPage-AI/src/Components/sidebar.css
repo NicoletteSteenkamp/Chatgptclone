@@ -1,0 +1,37 @@
+.sidebar {
+  width: 300px;
+  background-color: #f9f9f9;
+  color: #5c5f62;
+  
+  padding-left: 10px;
+ 
+
+}
+
+
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-items li {
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.menu-items li a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu-items li a:hover {
+  color: #bdc3c1;
+}
+
+.menu-items li svg {
+  margin-right: 10px;
+}

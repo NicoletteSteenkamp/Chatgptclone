@@ -1,7 +1,4 @@
-import React from 'react';
 import './sidebar.css'; 
-import logo from "./assets/chatlogo.png";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faUsers, faGear, faPeopleArrows, faDollarSign, faArrowRightArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -9,10 +6,6 @@ import { Link } from 'react-router-dom';
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <div className="logo">
-        <img src={logo} alt='logo'/>
-        <h1>SuperPage</h1> 
-      </div>
       <ul className="menu-items">
         <li>
           <Link to="/ai-chat">
@@ -50,3 +43,4 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+

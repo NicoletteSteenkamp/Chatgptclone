@@ -1,22 +1,50 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { ClerkProvider } from '@clerk/clerk-react';
-import App from './App';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
+import Login from "./Login";
+import SignUp from "./SignUp";
+import Home from "./Home";
 
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-
-if (!PUBLISHABLE_KEY) {
-  throw new Error("Missing Publishable Key");
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <SignedIn>
+              <Home />
+            </SignedIn>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <SignedOut>
+              <Login />
+            </SignedOut>
+          }
+        />
+        <Route
+          path="/sign-up"
+          element={
+            <SignedOut>
+              <SignUp />
+            </SignedOut>
+          }
+        />
+        {/* Redirect all other routes to login if not authenticated */}
+        <Route
+          path="*"
+          element={
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          }
+        />
+      </Routes>
+    </Router>
+  );
 }
 
-createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
-      <App />
-    </ClerkProvider>
-  </React.StrictMode>,
-);
+export default App;
 
-
-
-export default App

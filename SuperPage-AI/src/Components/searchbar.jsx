@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane, faTrashAlt, faVolumeUp } from '@fortawesome/free-solid-svg-icons'; // Import your icons
+import { faPaperPlane, faTrashAlt, faVolumeUp } from '@fortawesome/free-solid-svg-icons'; 
+import "./searchbar.css";
 
 const SearchBar = ({ updateResults, currentResults, chatHistory, setChatHistory }) => {
   const [value, setValue] = useState("");

@@ -2,13 +2,30 @@
   width: 300px;
   background-color: #f9f9f9;
   color: #5c5f62;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0;
   padding-left: 10px;
  
 
 }
 
+.logo {
+  display: flex; /* Use flexbox to position children next to each other */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 10px; /* Optional: space below logo */
+}
 
+.logo img {
+  width: 50px;
+  margin-right: 10px; /* Space between logo image and text */
+}
+
+.logo h1 {
+  color: #191a1a;
+  font-size: 24px;
+}
 
 .menu-items {
   list-style: none;

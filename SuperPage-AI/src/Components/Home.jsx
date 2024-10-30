@@ -3,6 +3,7 @@ import Sidebar from "./sidebar";
 import Header from "./Header";
 import Footer from "./Footer";
 import SearchBar from "./searchbar";
+import "./Home.css";
 
 
 function Home() {
@@ -17,7 +18,6 @@ function Home() {
       <Sidebar/>
       </section>
       <main>
-        
         <SearchBar/>
       </main>
       <footer>

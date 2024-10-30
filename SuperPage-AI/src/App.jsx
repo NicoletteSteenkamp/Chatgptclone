@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
-import Login from "./Login";
-import SignUp from "./SignUp";
-import Home from "./Home";
+import Login from "./Components/Login";
+import SignUp from "./Components/SignUp";
+import Home from "./Components/Home";
 
 function App() {
   return (

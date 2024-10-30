@@ -13,7 +13,7 @@ require("dotenv").config();
 const app = express();
 const port = 3000;
 const salt = 10;
-const API_KEY = "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";
+
 
 // Middleware setup
 app.use(express.json());
